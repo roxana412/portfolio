@@ -6,13 +6,17 @@
 </head>
   <base target="_parent">
 <body style="background-color:lightyellow;">
-  <div id="templateInfo'>
 <title>QUEER BOI</title>
-<div id="page">
-  <div id="header">
-    <div style="text-align:center;">
-      <h1 "Roxana!" style="text-align:center;font-family:courier;color:powderblue"> <b> </h1> </div>
- <p style="color:lightpink;text-align:center;" title="memz r gr9"> <i> Hi! I literally hate everything except dogs and Voltron. </i> </p> <br>
+	  <div class="title">Nina's Webpage</div>
+      
+    <div class="slideshow">
+        <img class="slides" src="santag.jpg">
+        <img class="slides" src="russo.jpg">        
+        <img class="slides" src="voltron.png">
+			
+	</div>
+
+
  <p> <img src="DOG.gif" alt="OOP"> </p>
    <img src="https://s-media-cache-ak0.pinimg.com/736x/ae/67/fc/ae67fccf0f42ef56b3447b5fba2d5ed2--sakura-shiba-inu.jpg"> </p> <br>
  <p> <img src="DOG.gif"> </p> <br>
@@ -21,5 +25,31 @@
 </div>
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLSM9Rzy5Qpq2YxoLqV0LxW-h3igLGFNx9" > FUN </a href> </p>
     </base target="_parent"> 
+//Java
+	<script>
+	
+	var index = 0;
+	slideshow();
+													
+	function slideshow() {
+		var i;
+		var elements = document.getElementsByClassName("slides");
+																													 
+		for (i = 0; i < elements.length; i++) {
+			elements[i].style.display = "none"; }
+																				
+		index++;
+																				
+		if (index > elements.length) {
+			index = 1;
+		}
+																				
+		elements[index-1].style.display = "block";
+		setTimeout(slideshow, 3000);
+	}
+																						 
+	</script>
+																				
+        
 </body>
 </html>

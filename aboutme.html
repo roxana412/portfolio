@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <style>
-   </style>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+    <title>All About Nina</title>
+    
+    <style>
+      
+    body {
+        background-color: #E9E9EA;
+        font-family: "Open Sans";
+        margin: 0;
+      }
+        
+    h1, h2 {
+        color: #BB8588;
+    }
+      
+    a {
+        text-decoration: none;        
+    }    
+        
+    a:link, a:visited {
+        color: #D8A48F;        
+    }    
+    
+    a:hover {
+        color: #D6CE93;        
+    }
+        
+    ul {
+        list-style-position: inside;
+    }
+        
+    .textbox {
+        width: 600px;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+       
+    .textbox img {
+        display: block;
+        margin: auto;
+        }    
+        
+    .slideshow {
+        width: 100%;
+        height: 500px;
+        background-color: dimgray;
+        overflow: hidden;
+
+    }    
+    
+    .slides {
+        width: 103%;
+        margin: -10px;
+        opacity: 0.4;
+         -webkit-filter: blur(8px);
+        display: none;  
+    }
+        
+    .title {
+        position: absolute;
+        font-size: 80px;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        margin-top: 180px;
+        color: white;
+    }    
+        
+    </style>
+  </head>
 </head>
-  <base target="_parent">
-<body style="background-color:lightyellow;">
-<title>QUEER BOI</title>
+<body>
+ 	 <base target="_parent">
+	<body style="background-color:lightyellow;">
+	<title>QUEER BOI</title>
 	<div class="title">Roxana!</div>
       
     	<div class="slideshow">
@@ -25,7 +96,7 @@
 </div>
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLSM9Rzy5Qpq2YxoLqV0LxW-h3igLGFNx9" > FUN </a href> </p>
     </base target="_parent"> 
-//Java
+
 	<script>
 	
 	var index = 0;
@@ -36,7 +107,8 @@
 		var elements = document.getElementsByClassName("slides");
 																													 
 		for (i = 0; i < elements.length; i++) {
-			elements[i].style.display = "none"; }
+			elements[i].style.display = "none"; 
+		}
 																				
 		index++;
 																				

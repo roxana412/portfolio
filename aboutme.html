@@ -100,7 +100,11 @@
   from {opacity: .4} 
   to {opacity: 1}
 }   
-        
+
+body {
+	background: url("https://s-media-cache-ak0.pinimg.com/originals/59/e7/9a/59e79af3250e554f77cae58faafeff26.jpg");
+	}
+	    
     </style>
   </head>
 </head>
@@ -179,30 +183,33 @@
     </base target="_parent"> 
 
 	<script>
-	var index = 0; //variable called index, stores zero
-    slideshow(); //calls the functioN slideshow 
-        
-    function slideshow() { //defining functioN 
-        var i;
-        var elements = document.getElementsByClassName("slides"); //variable called elements
-//This is a variable called elements
-//The doc variable calls the functioN getElementsByClassName
-//getElementsByClassName takes a parameter called slideS 
-        for (i = 0; i < elements.length; i++) {
-            elements[i].style.display = "none";
-        }
-        
-        index++;
-        
-        if (index > elements.length) {
-            index = 1;
-        }
-        
-        elements[index-1].style.display = "block";
-        setTimeout(slideshow, 2000);
-    }
+	var slideIndex = 1;
+showSlides(slideIndex);
 
-																						 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+																					 
 	</script>
 																				
         

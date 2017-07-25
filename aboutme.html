@@ -8,68 +8,98 @@
     <style>
       
     body {
-        background-image: url("https://s-media-cache-ak0.pinimg.com/736x/53/2a/6c/532a6c6c754f38ddf4195f39cd4bfb1e--mirror-mirror-mirrors.jpg");
-        font-family: "Open Sans";
-        margin: 0;
-      }
-        
-    h1, h2 {
-        color: #BB8588;
-    }
-      
-    a {
-        text-decoration: none;        
-    }    
-        
-    a:link, a:visited {
-        color: #D8A48F;        
-    }    
-    
-    a:hover {
-        color: #D6CE93;        
-    }
-        
-    ul {
-        list-style-position: inside;
-    }
-        
-    .textbox {
-        width: 600px;
-        margin-top: 40px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-       
-    .textbox img {
-        display: block;
-        margin: auto;
-        }    
-        
-    .slideshow {
-        width: 100%;
-        height: 500px;
-        background-color: dimgray;
-        overflow: hidden;
+* {box-sizing:border-box}
 
-    }    
-    
-    .slides {
-        width: 103%;
-        margin: -10px;
-        opacity: 0.4;
-         -webkit-filter: blur(8px);
-        display: none;  
-    }
-        
-    .title {
-        position: absolute;
-        font-size: 80px;
-        font-weight: bold;
-        width: 100%;
-        text-align: center;
-        margin-top: 180px;
-        color: white;
-    }    
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}   
         
     </style>
   </head>
@@ -77,14 +107,66 @@
 <body>
  	 <base target="_parent">
 	
-	<div class="title">Roxana!</div>
-      
-    	<div class="slideshow">
-        	<img class="slides" src="santag.jpg">
-        	<img class="slides" src="russo.jpg">        
-        	<img class="slides" src="santab.jpg">
-			
+	<div class="slideshow-container">
+	<div class="mySlides fade">
+	<div class="numbertext">1 / 3</div>
+		<img src="sky1.jpg" style="width:100%">
+    	<div class="text">Caption Text</div>
+ 	</div>
+
+  	<div class="mySlides fade">
+  	<div class="numbertext">2 / 3</div>
+    		<img src="http://static.gamespot.com/uploads/screen_small/1456/14565827/3002291-video%20image.jpg" style="width:100%">
+    	<div class="text">Caption Two</div>
 	</div>
+
+  	<div class="mySlides fade">
+    	<div class="numbertext">3 / 3</div>
+    		<img src="sky2.jpg" style="width:100%">
+    	<div class="text">Caption Three</div>
+	</div>
+		
+	<div class="mySlides fade">
+    	<div class="numbertext">3 / 3</div>
+    		<img src="img3.jpg" style="width:100%">
+    	<div class="text">Caption Three</div>
+	</div>
+		
+	<div class="mySlides fade">
+    	<div class="numbertext">3 / 3</div>
+    		<img src="sky3.jpg.jpg" style="width:100%">
+    	<div class="text">Caption Three</div>
+	</div>
+		
+	<div class="mySlides fade">
+    	<div class="numbertext">3 / 3</div>
+    		<img src="img3.jpg" style="width:100%">
+    	<div class="text">Caption Three</div>
+  	</div>
+		
+	<div class="mySlides fade">
+    	<div class="numbertext">3 / 3</div>
+    		<img src="sky4.jpg" style="width:100%">
+    	<div class="text">Caption Three</div>
+  	</div>
+
+	<div class="mySlides fade">
+    	<div class="numbertext">3 / 3</div>
+    		<img src="img3.jpg" style="width:100%">
+    	<div class="text">Caption Three</div>
+  	</div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 
 
  <p> <img src="DOG.gif" alt="OOP"> </p>
@@ -97,27 +179,29 @@
     </base target="_parent"> 
 
 	<script>
-	
-	var index = 0;
-	slideshow();
-													
-	function slideshow() {
-		var i;
-		var elements = document.getElementsByClassName("slides");
-																													 
-		for (i = 0; i < elements.length; i++) {
-			elements[i].style.display = "none"; 
-		}
-																				
-		index++;
-																				
-		if (index > elements.length) {
-			index = 1;
-		}
-																				
-		elements[index-1].style.display = "block";
-		setTimeout(slideshow, 3000);
-	}
+	var index = 0; //variable called index, stores zero
+    slideshow(); //calls the functioN slideshow 
+        
+    function slideshow() { //defining functioN 
+        var i;
+        var elements = document.getElementsByClassName("slides"); //variable called elements
+//This is a variable called elements
+//The doc variable calls the functioN getElementsByClassName
+//getElementsByClassName takes a parameter called slideS 
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.display = "none";
+        }
+        
+        index++;
+        
+        if (index > elements.length) {
+            index = 1;
+        }
+        
+        elements[index-1].style.display = "block";
+        setTimeout(slideshow, 2000);
+    }
+
 																						 
 	</script>
 																				
